@@ -95,8 +95,8 @@ public class King extends ChessPiece {
             Position posR1 = new Position(position.getRow(), position.getColumn() + 3);
             if (testRookCastling(posR1)) {
 
-                Position p1 = new Position(posR1.getRow(), posR1.getColumn() + 1);
-                Position p2 = new Position(posR1.getRow(), posR1.getColumn() + 2);
+                Position p1 = new Position(position.getRow(), position.getColumn() + 1);
+                Position p2 = new Position(position.getRow(), position.getColumn() + 2);
 
                 if(getBoard().piece(p1) == null && getBoard().piece(p2) == null) {
                     mat[position.getRow()][position.getColumn() + 2] = true;
@@ -108,9 +108,9 @@ public class King extends ChessPiece {
             Position posR2 = new Position(position.getRow(), position.getColumn() - 4);
             if (testRookCastling(posR2)) {
 
-                Position p1 = new Position(posR2.getRow(), posR1.getColumn() - 1);
-                Position p2 = new Position(posR2.getRow(), posR1.getColumn() - 2);
-                Position p3 = new Position(posR2.getRow(), posR1.getColumn() - 3);
+                Position p1 = new Position(position.getRow(), position.getColumn() - 1);
+                Position p2 = new Position(position.getRow(), position.getColumn() - 2);
+                Position p3 = new Position(position.getRow(), position.getColumn() - 3);
 
                 if(getBoard().piece(p1) == null && getBoard().piece(p2) == null && getBoard().piece(p3) == null) {
                     mat[position.getRow()][position.getColumn() - 2] = true;
